@@ -502,6 +502,28 @@ button {
     background-attachment: fixed;
 }
 
+.blog-title {
+    animation: saltar 3s infinite;
+    animation-timing-function: ease-in-out;
+    transform: translateX(0);
+    padding-bottom: 20px;
+    font-family: 'Alfa Slab One', cursive;
+    letter-spacing: 8px;
+}
+
+
+
+@keyframes saltar {
+    0% {
+        transform: translatey(0);
+    }
+   
+    50% {
+        transform: translatey(20px);
+    }
+    
+}
+
 
 .video-blog {
     margin-top: 150px;
@@ -536,7 +558,6 @@ button {
     top: 0;
     left: 0;
 }
-
 
 
 
