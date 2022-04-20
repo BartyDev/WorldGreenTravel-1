@@ -1,0 +1,660 @@
+/*google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Raleway:wght@200;300;500&display=swap');
+
+/*-----------style reset--------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/*-----CONTENEDOR GRID-----*/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(60deg, rgba(102, 99, 134, 0.281) 0%, rgba(175, 251, 152, 0.315) 100%), url(../assets/mounitain1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+.grid__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px auto 150px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+
+/*-----CONTENIDO GRID HEADER----------*/
+.header__content {
+    grid-area: header;
+
+}
+
+.nav__header {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 160px;
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: rgba(29, 226, 62, 0.843);
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav__menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0, 0, 0, .95);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav__menu li {
+    display: none;
+    line-height: 30px;
+    margin: 100px 0;
+    transition: all .5s;
+}
+
+.nav__menu li a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav__menu li a.active,
+.nav__menu li a:hover {
+    color: rgba(29, 226, 62, 0.843);
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.nav__menu {
+    height: 100vh;
+}
+
+#check:checked~.nav__menu li {
+    display: block;
+}
+
+
+/*---------CONTENIDO GRID MAIN---------*/
+.main__content {
+    grid-area: main;
+
+}
+
+.banner {
+    margin-top: 150px;
+    text-align: center;
+    color: #fff;
+}
+
+
+.banner h1 {
+    font-size: 45px;
+    font-weight: 600;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.banner h2 {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.banner h4 {
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: #e70c0c;
+}
+
+
+.button1 {
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: rgba(29, 226, 62, 0.843);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.button1:hover {
+    background-color: #fff;
+    color: rgba(29, 226, 62, 0.842);
+    ;
+    transition: .5s;
+}
+
+.button2 {
+    margin-right: auto;
+    padding: 10px 20px;
+    background-color: rgba(29, 226, 62, 0.842);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.button2:hover {
+    background-color: #fff;
+    color: rgba(29, 226, 62, 0.842);
+    transition: .5s;
+}
+
+
+
+/*------------CONTENIDO GRID FOOTER--------*/
+
+
+.footer__content {
+    grid-area: footer;
+    align-self: flex-end;
+}
+
+.div__p {
+    display: block;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.div_a img {
+    padding: 0px 20px;
+}
+
+.diseñador p {
+    padding: 5px 0px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+hr {
+    border-color: rgba(29, 226, 62, 0.843);
+}
+
+/*-------CONTENIDO POR PAGINAS----------*/
+
+
+/*-----PAGINA TOURS----*/
+
+.tours {
+    background-image: linear-gradient(60deg, rgba(102, 99, 134, 0.281) 0%, rgba(175, 251, 152, 0.315) 100%), url(../assets/palmera\ y\ risco.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+span {
+    color: #0c10e7;
+}
+
+/*CARDS*/
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: rgb(0, 81, 255);
+    width: 250px;
+    margin: 30px 40px;
+    border-radius: 15px;
+}
+
+.nacional {
+    background-color: #fff;
+}
+
+.card-image {
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+
+.card-1 {
+    background-image: url(../assets/lagotiticaca.jpg);
+}
+
+.card-2 {
+    background-image: url(../assets/nevadoperu.jpg);
+}
+
+.card-3 {
+    background-image: url(../assets/cerrode7colores.jpg);
+}
+
+.card-4 {
+    background-image: url(../assets/MACHUPICCHU.jpg);
+}
+
+.card-5 {
+    background-image: url(../assets/CRISTOREDENTOR.jpg);
+}
+
+.card-6 {
+    background-image: url(../assets/CHECHENITZA.jpg);
+}
+
+.card-7 {
+    background-image: url(../assets/MURALLACHINA.jpg);
+}
+
+.card-8 {
+    background-image: url(../assets/COLISEUM.jpg);
+}
+
+.card-9 {
+    background-image: url(../assets/TAJMAHAL.jpg);
+}
+
+.card-10 {
+    background-image: url(../assets/PETRA.jpg);
+}
+
+.card h3 {
+    padding: 10px;
+}
+
+.card p {
+    padding: 10px;
+}
+
+.card a {
+    background-color: #000;
+    color: #fff;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    background-color: rgb(62, 62, 62);
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+}
+
+.card a:hover {
+    color: rgba(29, 226, 62, 0.842);
+}
+
+
+
+/*-----PAGINA QUIENES SOMOS?----*/
+
+.somoslp {
+    background-image:linear-gradient(60deg, rgba(102, 99, 134, 0.281) 0%, rgba(175, 251, 152, 0.281) 100%), url(../assets/peñas\ mar.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.nosotros-div {
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenido-img {
+    display: inline-flex;
+    align-content: center;
+    margin-bottom: 20px;
+
+}
+
+.contenido-img img {
+    width: 320px;
+    padding: 5px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.contenido-nosotros {
+    display: inline-flex;
+    width: 350px;
+    flex-wrap: wrap;
+}
+
+
+/*-----PAGINA CONTACTO----*/
+
+.contactolp {
+    background-image:linear-gradient(60deg, rgba(102, 99, 134, 0.281) 0%, rgba(175, 251, 152, 0.315) 100%), url(../assets/puentepuerto.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contac-main {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+form {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    width: 90%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+}
+
+form h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+    
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+.form .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+.inputx,
+textarea {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #a8e063;
+    resize: none;
+}
+
+.inputx:focus,
+textarea:focus {
+    outline: none;
+    color: rgb(94, 93, 93)
+}
+
+.inputx:focus~.labelx,
+.inputx:valid~.labelx,
+textarea:focus~.labelx,
+textarea:valid~.labelx {
+    position: absolute;
+    top: -14px;
+    font-size: 12px;
+    color: #56ab2f;
+}
+
+.labelx {
+    color: gray;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+
+.inputx:focus~.barra::before,
+textarea:focus~.barra::before {
+    width: 100%;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #dce35b, #45b649);
+    transition: all 0.4s ease;
+    left: 0%;
+}
+
+button {
+    background: #DCE35B;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #45B649, #DCE35B);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #45B649, #DCE35B);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: block;
+    width: 100px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+
+/*-----PAGINA Blog----*/
+
+.bloglp {
+    background-image:linear-gradient(60deg, rgba(102, 99, 134, 0.281) 0%, rgba(175, 251, 152, 0.315) 100%), url(../assets/CHECHENITZA.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.video-blog {
+    margin-top: 150px;
+}
+
+.titulovid {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    color:#0c10e7;
+}
+
+.videox {
+    width: 80%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.video::after {
+    content: "";
+    display: block;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.code-video {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+
+
+
+/*----------RESPONSIVE FOR DESKTOP------------*/
+
+@media all and (min-width: 850px) {
+
+    /*---------CONTENIDO GRID HEADER-------*/
+
+
+    .nav__header {
+        height: 180px;
+    }
+
+    .logo {
+        margin-left: 50px;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav__menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: auto;
+    }
+
+    .nav__menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 30px;
+        transition: none;
+    }
+
+    .nav__menu li a {
+        font-size: 18px;
+    }
+
+    /*------CONTENIDO GRID MAIN-------*/
+
+    .banner h1 {
+        font-size: 80px;
+        margin-bottom: 5px;
+    }
+
+    .banner h2 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .banner h4 {
+        font-size: 15px;
+        margin-bottom: 30px
+    }
+
+
+    .contenido-nosotros {
+        display: inline-flex;
+        width: 550px;
+        height: 550px;
+        flex-wrap: wrap;
+        align-items: center;
+        font-size: 18px;
+        color: #fff;
+    }
+
+
+
+    .nosotros-div {
+        display: flex;
+        margin-top: 50px;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .mision {
+        font-size: 21px;
+        align-content: center;
+    }
+
+    
+    form {
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    width: 30%;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    form h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 800;
+    }
+    
+
+    .videox {
+    width: 50%;
+    height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+    /*-------CONTENIDO GRID FOOTER----------*/
+
+}
